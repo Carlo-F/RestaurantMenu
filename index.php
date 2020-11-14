@@ -52,13 +52,19 @@ chdir(dirname(__DIR__));
 $base_path = __DIR__;
 define('BASEPATH', $base_path);
 
-// laod configuration file
-$config = require_once $base_path.'/config/config.php';
-
-// laod data file
-$data = include_once __DIR__.'/data/menu.xml';
-
-//aggiungere controllo per i due file
+try {
+    if (!file_exists($base_path."/config/config.php") || !file_exists($base_path."/data/menu.xml"))
+        throw new Exception ('Web page not available');
+	else
+		// laod configuration file
+		$config = require_once($base_path.'/config/config.php');
+		
+		// laod data file
+		$data = include_once $base_path.'/data/menu.xml';
+}
+catch(Exception $e) {    
+    die($e->getMessage());
+}
 
 ?>
 
