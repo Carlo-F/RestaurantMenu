@@ -189,7 +189,7 @@ foreach($data as $elem) {
                                     <div class="" uk-grid>
 										<div class="uk-width-expand">
                                             <h4><?= $item['name'] ?></h4>
-                                            <p><?= empty($item['description'])?'-':$item['description'] ?></p>
+                                            <p><?= empty($item['description'])?' ':$item['description'] ?></p>
                                         </div>
 										<div><?= $item['price'] ?></div>
                                     </div>
