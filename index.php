@@ -76,7 +76,7 @@ foreach($data as $elem) {
 		array_push($categories,(string)$elem->category);
 	}
 	$json = json_encode($elem);
-	array_push($menu,json_decode($json, TRUE));
+	$menu[(string)$elem->category][] = json_decode($json, TRUE);
 }
 
 ?>
@@ -173,28 +173,32 @@ foreach($data as $elem) {
 			<div class="uk-container">
 				<div class="uk-section uk-section-small uk-padding-remove-top">
 					<ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade">
-						
-						<li><a class="uk-border-pill" href="#">Antipasti</a></li>
-						
+						<?php foreach($menu as $category => $elem) : ?>
+						<li><a class="uk-border-pill" href="#"><?= $category ?></a></li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 
 				<ul class="uk-switcher uk-margin">
+					<?php foreach($menu as $category => $item) : ?>
 					<li>
 						<div class="uk-grid uk-flex-middle" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
 							<div class="uk-width-1-1" data-uk-scrollspy-class="uk-animation-slide-right-medium">
-                                    <h6 class="uk-text-primary menu-category">ANTIPASTI</h6>
+									<h6 class="uk-text-primary menu-category"><?= $category ?></h6>
+									<?php foreach ($item as $item) : ?>
                                     <div class="" uk-grid>
 										<div class="uk-width-expand">
-                                            <h4>Great stuff</h4>
-                                            <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation.</p>
+                                            <h4><?= $item['name'] ?></h4>
+                                            <p><?= empty($item['description'])?'-':$item['description'] ?></p>
                                         </div>
-										<div>$20.90</div>
+										<div><?= $item['price'] ?></div>
                                     </div>
-                                    <hr>
+									<hr>
+									<?php endforeach; ?>
 							</div>
 						</div>
-                    </li>
+					</li>
+					<?php endforeach; ?>
 				</ul>
 				
 				
