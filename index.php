@@ -53,17 +53,30 @@ $base_path = __DIR__;
 define('BASEPATH', $base_path);
 
 try {
-    if (!file_exists($base_path."/config/config.php") || !file_exists($base_path."/data/menu.xml"))
+    if (!file_exists($base_path."/config/config.php"))
         throw new Exception ('Web page not available');
 	else
 		// laod configuration file
 		$config = require_once($base_path.'/config/config.php');
 		
-		// laod data file
-		$data = include_once $base_path.'/data/menu.xml';
 }
 catch(Exception $e) {    
     die($e->getMessage());
+}
+
+// laod data file
+$data = simplexml_load_file($base_path."/data/menu.xml") or die("Menu non disponibile");
+
+$categories = [];
+$menu = [];
+
+//fill categories
+foreach($data as $elem) {
+	if(!in_array($elem->category,$categories)) {
+		array_push($categories,(string)$elem->category);
+	}
+	$json = json_encode($elem);
+	array_push($menu,json_decode($json, TRUE));
 }
 
 ?>
@@ -160,7 +173,9 @@ catch(Exception $e) {
 			<div class="uk-container">
 				<div class="uk-section uk-section-small uk-padding-remove-top">
 					<ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade">
+						
 						<li><a class="uk-border-pill" href="#">Antipasti</a></li>
+						
 					</ul>
 				</div>
 
