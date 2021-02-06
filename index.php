@@ -1,13 +1,14 @@
 <?php
 /*
  |---------------------------------------------------------------
- | RESTAURANT MENU
+ | MENU ONLINE
  |---------------------------------------------------------------
  *
- * A simple web application to display restaurant menu
+ * A super simple web application to display restaurant menu
  * 
  * Developed by Carlo Feniello in November 2020 during the Covid-19 pandemic
  * 
+ * Made with UIKit (https://getuikit.com/)
  *
  * @author	Carlo Feniello (https://www.carlof.it)
  * @license	https://opensource.org/licenses/MIT	MIT License
@@ -123,7 +124,6 @@ foreach($data as $elem) {
 	</style>
 </head>
 <body>
-<body>
 		<!-- INFO -->
 		<section class="uk-section uk-section-default uk-box-shadow-small uk-section-xsmall">
 			<div class="uk-container">
@@ -232,6 +232,5 @@ foreach($data as $elem) {
 			</div>
 		</footer>
 		<!-- /FOOTER -->
-	</body>
 </body>
 </html>

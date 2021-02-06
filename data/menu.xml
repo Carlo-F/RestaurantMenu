@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <category>Antipasti</category>
+        <name>Tagliere misto</name>
+        <price>€5.50</price>
+        <description>Tagliere misto: prosciutti e formaggi</description>
+    </item>
+    <item>
+        <category>Antipasti</category>
+        <name>Insalata di stagione</name>
+        <price>€3.00</price>
+        <description>Valeriana, cicoria e lattuga</description>
+    </item>
+    <item>
+        <category>Primi piatti</category>
+        <name>Fettuccine ai porcini</name>
+        <price>€15.00</price>
+        <description></description>
+    </item>
+    <item>
+        <category>Antipasti</category>
+        <name>Selezione di formaggi</name>
+        <price>€8.50</price>
+        <description>Tris di formaggi di capra</description>
+    </item>
+    <item>
+        <category>Secondi piatti</category>
+        <name>Bistecca alla Fiorentina</name>
+        <price>€28.50 al Kg</price>
+        <description>Con sale grosso e rucola di contorno</description>
+    </item>
+</menu> 
