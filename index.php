@@ -227,7 +227,7 @@ foreach($data as $elem) {
 			</div>
 			
 			<div class="uk-text-center uk-padding uk-padding-remove-horizontal">
-				<span class="uk-text-small uk-text-muted">© <?= date('Y') ?> Creato da <a href="https://www.studioaf.eu/">Studio A.F.</a></span>
+				<span class="uk-text-small uk-text-muted">© <?= date('Y') ?> Creato da <a href="https://www.carlof.it/">Carlo F. web solutions</a></span>
 			</div>
 		</footer>
 		<!-- /FOOTER -->
