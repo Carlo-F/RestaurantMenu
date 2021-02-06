@@ -1,4 +1,4 @@
-## Menu online
+## Restaurant Menu
 
 ### A super simple web application to display a restaurant menu
 
@@ -14,7 +14,3 @@ Made with UIKit (https://getuikit.com/).
 ### Author
 
 Carlo Feniello [https://www.carlof.it](https://www.carlof.it)
-
-### License
-
-MIT: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)

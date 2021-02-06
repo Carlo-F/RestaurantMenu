@@ -1,7 +1,7 @@
 <?php
 /*
  |---------------------------------------------------------------
- | MENU ONLINE
+ | Restaurant Menu
  |---------------------------------------------------------------
  *
  * A super simple web application to display restaurant menu
@@ -11,7 +11,6 @@
  * Made with UIKit (https://getuikit.com/)
  *
  * @author	Carlo Feniello (https://www.carlof.it)
- * @license	https://opensource.org/licenses/MIT	MIT License
  * @since	Version 1.0.0
  * 
  * 
